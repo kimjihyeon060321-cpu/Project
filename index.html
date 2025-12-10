@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Fav Kpop Song</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="team-name">1조</div>
+    <div class="school-name">한양대학교 erica</div>
+</header>
+
+<h1 class="main-title">Fav Kpop Song</h1>
+
+<main class="content">
+    <section class="song-info-box">
+        <h2>노래 정보</h2>
+        <div id="song-info">
+            <p class="info-placeholder">노래 표지를 선택하면 설명이 나타납니다.</p>
+        </div>
+    </section>
+
+    <section class="player-box">
+        <h2>재생하기</h2>
+        <div id="selected-title" class="selected-title">여기에 노래 제목이 표시됩니다.</div>
+        <button id="play-btn" class="play-btn">▶ 재생</button>
+    </section>
+</main>
+
+<section class="album-section">
+    <div class="album-item">
+        <img src="img/song1.jpg" alt="노래1" class="album"
+             data-title="노래 제목 1"
+             data-info="이 노래를 좋아하는 이유와 설명을 작성하세요."
+             data-url="https://youtube.com/링크1">
+        <p class="album-title">노래 제목 1</p>
+    </div>
+
+    <div class="album-item">
+        <img src="img/song2.jpg" alt="노래2" class="album"
+             data-title="노래 제목 2"
+             data-info="이 노래를 좋아하는 이유와 설명을 작성하세요."
+             data-url="https://youtube.com/링크2">
+        <p class="album-title">노래 제목 2</p>
+    </div>
+
+    <div class="album-item">
+        <img src="img/song3.jpg" alt="노래3" class="album"
+             data-title="노래 제목 3"
+             data-info="이 노래를 좋아하는 이유와 설명을 작성하세요."
+             data-url="https://youtube.com/링크3">
+        <p class="album-title">노래 제목 3</p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

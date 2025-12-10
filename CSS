@@ -178,3 +178,21 @@ body {
         height: 180px;
     }
 }
+/* =========================================================
+    info-placeholder 스타일
+========================================================= */
+
+.info-placeholder {
+    margin-top: 15px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.info-placeholder:hover {
+    background-color: #e0e0e0;
+}

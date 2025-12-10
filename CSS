@@ -1,0 +1,180 @@
+/* =========================================================
+    기본 설정 (이건 건들지 않아도 돼!)
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f7f3ec; /* 크림 톤 전체 배경 */
+    color: #333;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* =========================================================
+    HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* =========================================================
+    메인 타이틀
+========================================================= */
+
+.main-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* =========================================================
+    메인 콘텐츠 박스 (노래 정보 + 플레이어)
+========================================================= */
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.song-info-box,
+.player-box {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* 박스 제목 */
+.song-info-box h2,
+.player-box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+/* 노래 정보가 나타나는 칸 */
+#song-info {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* =========================================================
+    플레이어 버튼
+========================================================= */
+
+.selected-title {
+    margin: 12px 0 20px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.play-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    background-color: #ffb87a; /* 부드러운 주황 */
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* 버튼 효과 */
+.play-btn:hover {
+    background-color: #ff9f4c;
+    transform: scale(1.03);
+}
+
+/* =========================================================
+    앨범 섹션
+========================================================= */
+
+.album-section {
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개 가로 배치 */
+    gap: 24px;
+}
+
+/* 앨범 카드 */
+.album-item {
+    text-align: center;
+}
+
+/* 앨범 표지 이미지 */
+.album {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* 이미지 비율이 이상해지는 것을 방지 */
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* hover 효과 */
+.album:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* 앨범 제목 */
+.album-title {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* =========================================================
+    반응형 디자인 (폰에서 깨지지 않도록!)
+========================================================= */
+
+@media (max-width: 768px) {
+    
+    .content {
+        flex-direction: column;
+    }
+
+    .album-section {
+        grid-template-columns: 1fr 1fr; /* 2개 열 */
+    }
+}
+
+@media (max-width: 500px) {
+    .album-section {
+        grid-template-columns: 1fr; /* 1개 열 */
+    }
+
+    .album {
+        height: 180px;
+    }
+}
